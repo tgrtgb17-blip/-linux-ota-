@@ -17,13 +17,13 @@
 
 ### 快速使用
 
--ota_b为boot请打开keil5将其下载到0x08000000
--ota_app为一个简单的闪灯代码（地址为0x08002800），如有需要请将此处替换（看门狗为之前想法，喂狗未删干净请见谅）
+- ota_b为boot请打开keil5将其下载到0x08000000
+- ota_app为一个简单的闪灯代码（地址为0x08002800），如有需要请将此处替换（看门狗为之前想法，喂狗未删干净请见谅）
         GPIO_ResetBits(GPIOC,GPIO_Pin_13);
         delay(1000);
         GPIO_SetBits(GPIOC,GPIO_Pin_13);
         delay(1000);
--ota_server请将其下载到linux系统上
+- ota_server请将其下载到linux系统上
 
 ### 服务端
 
