@@ -1,0 +1,10 @@
+{
+	"task_id":"001",
+	"firmware":"firmware/APP_v3.bin",
+	"version":1000,
+	"devices":{
+		"id":"001",
+		"version":"1"
+		}
+
+}
