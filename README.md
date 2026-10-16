@@ -19,21 +19,19 @@
 
 - ota_b为boot请打开keil5将其下载到0x08000000
 - ota_app为一个简单的闪灯代码（地址为0x08002800），如有需要请将此处替换（看门狗为之前想法，喂狗未删干净请见谅）
-        GPIO_ResetBits(GPIOC,GPIO_Pin_13);
-        delay(1000);
-        GPIO_SetBits(GPIOC,GPIO_Pin_13);
-        delay(1000);
-- ota_server请将其下载到linux系统上
-
-### 服务端
-
-cd ota_server
-python main.py
+        - GPIO_ResetBits(GPIOC,GPIO_Pin_13);
+        - delay(1000);
+        - GPIO_SetBits(GPIOC,GPIO_Pin_13);
+        - delay(1000);
+- ota_server请将其下载到linux系统里
+### 使用流程
+- cd ota_server
+- python main.py
 
 ### 需要修改的地方
 
--请在ota_server/firmware/里添加你想升级的bin文件，并在task.json上修改为自己的app代码
--请把mqtt_client.py上的broker修改为自己的服务器地址（不会问deepseek）
--请修改它devices.json和task.json（分别表示现有的设备，想要更新的设备）请按照格式修改
+- 请在ota_server/firmware/里添加你想升级的bin文件，并在task.json上修改为自己的app代码
+- 请把mqtt_client.py上的broker修改为自己的服务器地址（不会问deepseek）
+- 请修改它devices.json和task.json（分别表示现有的设备，想要更新的设备）请按照格式修改
 
 注：如果想要使用请确保以安装emqx，并且开启了emqx服务器（./bin/emqx start）
